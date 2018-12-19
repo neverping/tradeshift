@@ -64,4 +64,4 @@ Below are the examples within python or running the code direcly:
 .. code-block:: text
 
     $  python -c 'from triangle import check_triangle_type; print(check_triangle_type(1,2,3))'
-    This triangle is scalene type.
+    This triangle is a scalene type.

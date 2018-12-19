@@ -10,8 +10,8 @@ def check_triangle_type(a,b,c):
     triangle = {a,b,c}
 
     if len(triangle) == 1:
-        return 'This triangle is equilateral type.'
+        return 'This triangle is an equilateral type.'
     elif len(triangle) == 2:
-        return 'This triangle is isosceles type.'
+        return 'This triangle is an isosceles type.'
     else:
-        return 'This triangle is scalene type.'
+        return 'This triangle is a scalene type.'
