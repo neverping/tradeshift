@@ -13,12 +13,12 @@ class TestClass(object):
 
     def test_it_must_be_a_equilateral_triangle(self):
         t = check_triangle_type(2, 2, 2)
-        assert t == 'equilateral'
+        assert t == 'This triangle is equilateral type.'
 
     def test_it_must_be_a_isosceles_triangle(self):
         t = check_triangle_type(2, 1, 2)
-        assert t == 'isosceles'
+        assert t == 'This triangle is isosceles type.'
 
     def test_it_must_be_a_scalene_triangle(self):
         t = check_triangle_type(2, 1, 3)
-        assert t == 'scalene'
+        assert t == 'This triangle is scalene type.'
