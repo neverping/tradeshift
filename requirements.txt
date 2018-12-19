@@ -16,6 +16,7 @@ pluggy==0.8.0
 py==1.7.0
 pylint==1.9.3
 pytest==4.0.2
+pytest-runner==4.2
 scandir==1.9.0
 singledispatch==3.4.0.3
 six==1.12.0
