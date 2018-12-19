@@ -15,5 +15,3 @@ def check_triangle_type(a,b,c):
         return 'isosceles'
     else:
         return 'scalene'
-
-print(check_triangle_type(1,2,3))
