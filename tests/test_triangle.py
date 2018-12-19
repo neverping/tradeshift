@@ -1,12 +1,24 @@
 from triangle import check_triangle_type
+import pytest
 
 class TestClass(object):
 
     def test_if_inputs_are_ok(self):
-        assert check_triangle_type('a', 'b', None) == 0
-
-    def test_only_numbers_are_accepted(self):
-        assert check_triangle_type('a', 2, None) == 0
+        with pytest.raises(ValueError, match=r'All values must be integer type!'):
+            check_triangle_type('a', None, 1)
 
     def test_for_numbers_above_zero(self):
-        assert check_triangle_type(-1, 2, 0) == 2
+        with pytest.raises(ValueError, match=r'You must pass values greater than 0!'):
+            check_triangle_type(0, 2, -1)
+
+    def test_it_must_be_a_equilateral_triangle(self):
+        t = check_triangle_type(2, 2, 2)
+        assert t == 'equilateral'
+
+    def test_it_must_be_a_isosceles_triangle(self):
+        t = check_triangle_type(2, 1, 2)
+        assert t == 'isosceles'
+
+    def test_it_must_be_a_scalene_triangle(self):
+        t = check_triangle_type(2, 1, 3)
+        assert t == 'scalene'
