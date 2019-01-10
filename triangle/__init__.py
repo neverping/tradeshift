@@ -6,6 +6,9 @@ def check_triangle_type(a,b,c):
     if not all(v > 0 for v in [a,b,c]):
         raise ValueError('You must pass values greater than 0!')
 
+    if (a + b <= c) or (a + c <= b) or (b + c <= a):
+        raise ValueError('One the sides are too small to form a triangle! The value was {}.'.format(min(a,b,c)))
+
     triangle = set()
     triangle = {a,b,c}
 
